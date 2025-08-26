@@ -1,7 +1,17 @@
-export class Player {
-  constructor() {
-   
+class Player {
+  constructor(name, level) {
+    this.name = name;
+    this.level = level;
   }
-  
-  
+
+  info() {
+    console.log(`${this.name} has reached Level ${this.level}!`);
+  }
+
+  levelUp() {
+    this.level++;
+  }
 }
+
+// 👇 Exporta como objeto con la clave Player
+module.exports = { Player };
